@@ -33,6 +33,25 @@ export default{
       url: `/admin/edu/teacher/get/${id}`,
       method: 'get'
     })
+  },
+  deleteById(id) {
+    return request({
+      url: `/admin/edu/teacher/remove/${id}`,
+      method: 'delete'
+    })
+  },
+  batchRemove(idList) {
+    return request({
+      url: '/admin/edu/teacher/batch-remove',
+      method: 'delete',
+      data: idList
+    })
+  },
+  selectNameListByKey(key) {
+    return request({
+      url: `/admin/edu/teacher/list/name/${key}`,
+      method: 'get'
+    })
   }
 
 }

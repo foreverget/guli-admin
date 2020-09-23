@@ -42,7 +42,8 @@ import teacherApi from '@/api/teacher'
 export default {
   data() {
     return {
-      teacher: {}
+      teacher: {},
+      saveBtnDisabled: false
     }
   },
 
@@ -68,7 +69,7 @@ export default {
         this.updateData()
       }
     },
-    saveDate() {
+    saveData() {
       teacherApi.save(this.teacher).then(response => {
         this.$message({
           message: response.message,
