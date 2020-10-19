@@ -4,7 +4,7 @@ export default {
 
   pageList(page, limit) {
     return request({
-      baseURL: 'http://127.0.0.1:8140',
+      // baseURL: 'http://127.0.0.1:8140',
       url: `/admin/cms/ad/list/${page}/${limit}`,
       method: 'get'
     })
@@ -12,7 +12,7 @@ export default {
 
   removeById(id) {
     return request({
-      baseURL: 'http://127.0.0.1:8140',
+      // baseURL: 'http://127.0.0.1:8140',
       url: `/admin/cms/ad/remove/${id}`,
       method: 'delete'
     })
@@ -20,7 +20,7 @@ export default {
 
   save(ad) {
     return request({
-      baseURL: 'http://127.0.0.1:8140',
+      // baseURL: 'http://127.0.0.1:8140',
       url: '/admin/cms/ad/save',
       method: 'post',
       data: ad
@@ -29,7 +29,7 @@ export default {
 
   getById(id) {
     return request({
-      baseURL: 'http://127.0.0.1:8140',
+      // baseURL: 'http://127.0.0.1:8140',
       url: `/admin/cms/ad/get/${id}`,
       method: 'get'
     })
@@ -37,7 +37,7 @@ export default {
 
   updateById(ad) {
     return request({
-      baseURL: 'http://127.0.0.1:8140',
+      // baseURL: 'http://127.0.0.1:8140',
       url: '/admin/cms/ad/update',
       method: 'put',
       data: ad

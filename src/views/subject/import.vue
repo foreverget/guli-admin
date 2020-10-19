@@ -18,7 +18,7 @@
           :on-success="fileUploadSuccess"
           :on-error="fileUploadError"
           :limit="1"
-          action="http://127.0.0.1:8110/admin/edu/subject/import"
+          :action="BASE_API+'/admin/edu/subject/import'"
           name="file"
           accept="application/vnd.ms-excel">
           <el-button
@@ -41,8 +41,9 @@
 export default {
   data() {
     return {
+      BASE_API: process.env.BASE_API,
 
-    // https://guli-file-200522-gh-1.oss-cn-beijing.aliyuncs.com/excel/课程分类列表模板.xls
+      // https://guli-file-200522-gh-1.oss-cn-beijing.aliyuncs.com/excel/课程分类列表模板.xls
       defaultExcelTemplate: process.env.OSS_PATH + '/excel/课程分类列表模板.xls', // 默认Excel模板
       importBtnDisabled: false // 导入按钮是否禁用
     }
